@@ -1,8 +1,11 @@
 <div id='container'>
   <!-- Your html here -->
   <div>
+    <input type='text' ng-model='search'>
     <ul>
-      <li ng-repeat='link in data.links'>{{ link.code }} - {{link.title}}</li>
+      <li  ng-repeat="link in data.links |  filter: {title: search} | orderBy: '-visits'">
+        <a href={{'/'+link.code}}><strong>{{ link.code }}</strong> - {{link.title}} : {{link.visits}} Visits</a>
+      </li>
     </ul>
   </div>
 </div>

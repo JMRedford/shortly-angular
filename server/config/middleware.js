@@ -21,6 +21,9 @@ module.exports = function (app, express) {
   app.use('/api/links', linkRouter); // user link router for link request
   app.use(helpers.errorLogger);
   app.use(helpers.errorHandler);
+  app.use('/*', function(req, res){
+    res.redirect('/api/links/'+req.params[0]);
+  } )
 
   // inject our routers into their respective route files
   require('../users/userRoutes.js')(userRouter);
