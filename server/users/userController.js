@@ -49,6 +49,7 @@ module.exports = {
             username: username,
             password: password
           };
+          console.log(newUser);
           return create(newUser);
         }
       })

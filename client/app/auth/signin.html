@@ -1,8 +1,11 @@
 <div id='signin'>
   <h1>signin</h1>
-  <form name="signinForm" ng-submit='signin()'>
-    <input type='text'ng-model='user.username'>
-    <input type="password" ng-model='user.password'>
+  <form name="signinForm" ng-submit='signin(signinForm.$valid)' novalidate>
+    <input type='text' name='username' ng-model='user.username' required>
+    <span ng-hide='signinForm.username.$valid'>Username is required</span>
+    <input type="password" name='pass' ng-model='user.password' required>
+    <span ng-hide='signinForm.pass.$valid'>Password is required</span>
+    <br>
     <button>signin</button>
   </form>
   <a href="#/signup">Don't have an account? <strong>Signup</strong> ...</a>
