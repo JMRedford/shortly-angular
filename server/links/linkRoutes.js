@@ -13,10 +13,6 @@ module.exports = function (app) {
     .get(linksController.allLinks)
     .post(linksController.newLink);
 
-  app.route('/links')
-
-  app.route('/shorten')
-
   app.get('/:code', linksController.navToLink);
 
 };

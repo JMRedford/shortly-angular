@@ -1,4 +1,4 @@
-angular.module('shortly.links', ['ngFx','ngAnimate'])
+angular.module('shortly.links', [])
 
 .controller('LinksController', function ($scope, $http, $timeout, Links) {
   // Your code here
