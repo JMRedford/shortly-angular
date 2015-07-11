@@ -1,7 +1,9 @@
 body {
-  margin: 0;
   margin-top: 10px;
   font-family: arial, sans-serif;
+  width: 850px;
+  margin: auto;
+  background-color: #eee;
 }
 
 a {
@@ -13,6 +15,55 @@ a {
 h1 {
   font-style: italic;
   margin-bottom: 10px;
+}
+
+ul {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+li {
+  animation-duration: 2s;
+  animation-name: slidein;
+  padding: 2px;
+  margin-left: 15px;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+.internalLink {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.linkBar{
+  padding: 10px;
+  height: 40px;
+  background-color: #ddd;
+}
+
+.internalLink:hover {
+  color: blue;
+}
+
+.searchBox {
+  width: 175px;
+}
+
+.searchBox:focus {
+  width: 175px;
+  outline: none;
 }
 
 .navigation {

@@ -1,9 +1,10 @@
 <div id='container'>
   <!-- Your html here -->
   <div>
-    <input type='text' ng-model='search'>
+    <label>Search for shortened URL:</label>
+    <input type='text' class='searchBox' ng-model='search' placeholder='example.com'>
     <ul>
-      <li  ng-repeat="link in data.links |  filter: {title: search} | orderBy: '-visits'">
+      <li class='fx-zoom-up fx-easing-bounce fx-trigger' ng-repeat="link in data.links |  filter: {title: search} | orderBy: '-visits'">
         <a href={{'/'+link.code}}><strong>{{ link.code }}</strong> - {{link.title}} : {{link.visits}} Visits</a>
       </li>
     </ul>

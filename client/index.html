@@ -9,13 +9,21 @@
     <h1>Shortly</h1>
 
     <!-- the ng-view directive is where our templates will be loaded into when navigated to -->
-    <a href='#/links'>view all links</a>
-    <br>
-    <a href='#/shorten'>shorten a url</a>
+    <div class='linkBar'>
+      <div class='internalLink'>
+        <a class='internalLink' href='#/links'>view all links</a>
+      </div>
+      <div class='internalLink'>
+        <a class='internalLink' href='#/shorten'>shorten a url</a>
+      </div>
+    </div>
     <div ng-view></div>
 
     <script src="lib/angular/angular.js"></script>
     <script src="lib/angular-route/angular-route.js"></script>
+    <script src="lib/ngAnimate/js/angular-animate.min.js"></script>
+    <script src="lib/gsap/src/minified/TweenMax.min.js"></script>
+    <script src="lib/ngFx/dist/ngFx.js"></script>
 
     <script src="app/auth/auth.js"></script>
     <script src="app/links/links.js"></script>

@@ -1,4 +1,4 @@
-angular.module('shortly.shorten', [])
+ angular.module('shortly.shorten', [])
 
 .controller('ShortenController', function ($scope, $location, $http, Links) {
   $scope.link = {};
