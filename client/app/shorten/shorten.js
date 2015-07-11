@@ -5,6 +5,9 @@
   $scope.addLink = function(){
 
     //submit link url to server
-    $http.post('/api/links', {url:$scope.link.address});
+    $http.post('/api/links', {url:$scope.link.address})
+      .then(function(){
+        $location.path('/links');
+      });
   }
 });
